@@ -1,0 +1,17 @@
+<div class="mb-3">
+  <%= link_to new_group_path, class: 'btn btn-primary' do %>
+    Create a group
+  <% end %>
+</div>
+
+<% if @groups.present? %>
+  <nav class="nav flex-column">
+    <% @groups.each do |group| %>
+      <%= link_to group.name, group_path(group), class: 'nav-link group-nav-link' %>
+    <% end %>
+  </nav>
+<% else %>
+  <div class="text-muted">
+    The are no groups
+  </div>
+<% end %>

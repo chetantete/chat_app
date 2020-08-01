@@ -1,0 +1,16 @@
+<li>
+  <div class="row">
+    <div class="<%= user.id == message.user_id ? 'message-sent col' : 'message-received col' %>">
+      <div class="col">
+      <div class="message-content">
+	      <p class="mb-1"><%= message.body %></p>
+	      <div class="text-right">
+          <small>
+	      <%= message.updated_at %>
+	      </small>
+	      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</li>

@@ -1,0 +1,145 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+
+ul {
+  padding-left: 0px;
+  list-style: none;
+}
+
+.messages-list {
+  height: 60vh;
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.message-sent {
+  position: relative;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+  margin: 5px 20px;
+  padding: 10px;
+  float: right;
+}
+
+.message-received {
+  background-color: #F1F0F0;
+  border-color: #EEEEEE;
+  margin: 5px 20px;
+  padding: 10px;
+  float: left;
+}
+
+.group-nav-link {
+  border: 1px solid #292F33;
+  background: #2d545e;
+  color: white;
+
+  & + .group-nav-link {
+    border-top: 0 none;
+  }
+}
+
+.chat {
+  border: 1px solid #292F33;
+  background: #2d545e;
+  height: 60vh;
+  border-radius: 5px 5px 0 0;
+  overflow-y: auto;
+}
+
+.chat-input {
+  border-top: 0 none;
+  border-radius: 0 0 5px 5px;
+}
+
+.chat-message-container {
+  padding: 5px;
+
+  .avatar {
+    margin: 5px;
+  }
+
+  .message-content {
+    padding: 5px;
+    border: 1px solid #8B9DC3;
+    border-radius: 5px;
+    background: #212529;
+    color: white;
+  }
+
+  & + .chat-message-container {
+    margin-top: 10px;
+  }
+}
+
+a:hover {
+    color: tan !important;
+
+}
+
+li a{
+  color:white;
+}
+
+.avatar {
+  max-height:30px;
+  border-radius: 15px;
+  width:auto;
+  vertical-align:middle;
+}
+
+.fixed-height {
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.panel-default {
+  background: #2d545e;
+}
+
+.panel-heading {
+  color:white;
+  margin-left: 15px;
+}
+
+//loader css
+
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

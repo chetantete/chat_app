@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  host: localhost
+  database: chat_app_dev
+  username: root
+  password: root
+
+test:
+  <<: *default
+  host: localhost
+  database: chat_app_test
+  username: root
+  password: root
