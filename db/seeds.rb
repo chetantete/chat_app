@@ -8,18 +8,16 @@ password = '123456'
     password: password,
     password_confirmation: password
   )
-
-  user_3 = User.create(
-    email: "roneysmith@gmail.com",
-    password: password,
-    password_confirmation: password
-  )
-
-  user_4  = User.create(
-    email: "chetantete@gmail.com",
-    password: password,
-    password_confirmation: password
-  )
-
 end
 
+user_3 = User.create(
+  email: "roneysmith@gmail.com",
+  password: password,
+  password_confirmation: password
+)
+
+user_4  = User.create(
+  email: "chetan.tete@gmail.com",
+  password: password,
+  password_confirmation: password
+)
